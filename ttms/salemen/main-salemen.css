@@ -1,0 +1,82 @@
+body{
+    width: 100%;
+    height: auto;
+    overflow-x:hidden;
+    margin: 0;
+    padding: 0;
+
+}
+
+.s-head {
+    width: 100%;
+    height: 120px;
+}
+
+.s-head .s-logo {
+    width: 1050px;
+    height: 100%;
+    margin-left: 40px;
+    background: url('../img/logo4.png') no-repeat;
+    background-position: left;
+    background-size: auto 80%;
+    float: left;
+}
+
+.s-head .s-cover {
+    float: left;
+    position: relative;
+}
+
+.s-cover .s-search {
+    width: 350px;
+    padding:10px 12px;
+    margin-top: 60px;
+    border: 1px solid black;
+    outline: none;
+    height: 20px;
+    border-radius: 50px;
+}
+.s-cover #s-btn {
+    position: absolute;
+    bottom: 1px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    /*padding:8px 12px;*/
+    border-radius: 50%;
+    background-color: #353b55;
+}
+
+#s-btn .s-img {
+    width: 100%;
+    height: 100%;
+    background:url('../img/search.png') no-repeat;
+    background-position: center;
+    background-size: 50% auto;
+}
+ul {
+    width: 100%;
+    padding:0;
+    padding-left: 10%;
+    margin:0;
+    height: 60px;
+    background-color: #353b55;
+}
+
+ul li {
+    height: 100%;
+    padding: 0 20px;
+    text-align: center;
+    line-height: 60px;
+    color: white;
+    letter-spacing: 2px;
+    display: inline-block;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+}
+ul li:hover {
+    background-color: #2b2f44;
+}

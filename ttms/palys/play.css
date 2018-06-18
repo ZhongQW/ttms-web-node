@@ -1,0 +1,68 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#table{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    letter-spacing: 2px;
+}
+#table td,#table th{
+    font-size: 1.2em;
+    border: 1px solid black;
+    padding: 7px 9px 4px 7px;
+    color: black
+}
+#table th{
+    letter-spacing: 5px;
+    font-size: 1.4em;
+    text-align: center;
+    padding-top: 10px;
+    /*height: 30px;*/
+    padding-bottom: 6px;
+    background-color:white;
+    color:black;
+    /*text-align: left;*/
+}
+#table td{
+    color:black;
+}
+.hou{
+    background-color: rgb(240,240,240);
+}
+
+#btn {
+    margin: 20px;
+    float: right;
+    margin-right: 50px;
+    width: 90px;
+    height: 40px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background-color: black;
+    outline: none;
+    border:none;
+}
+
+
+#select, #lang {
+    width: 300px;
+    height: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#introduction {
+    width:300px;
+    height: 300px; 
+    margin-bottom: 10px;
+}
+
+#xdaTanFileImg,#length,#price,#name {
+    width: 300px;
+    height:40px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>userTTMS</title>
+    <link rel="stylesheet" href="home.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./home.js"></script>
+</head>
+
+<body>
+    <img class="image" src="http://p0.meituan.net/mmc/039bd9e99555d84008cc46305dfeb99f105211.jpg" style="width: 100%;height: auto;" />
+    
+    <div class="cover" hidden="hidden">
+        <div class="login" action="" id="login" >
+            <p class="title">番茄影视</p>
+            <br>
+            <input class="account" type="text" name="账号" placeholder="账号"><br>
+            <input class="passward" type="text" name="密码" placeholder="密码"><br>
+            <input class="autoLogin" type="checkbox" name="login" value="login">
+                <p class="autoLogintext">记住密码</p><br>
+            <input class="loginbtn" type="submit" value="登录" onclick="loginSucceed()">
+            <input class="findPassword" type="submit" value="忘记密码" onclick="findPassword()">
+            <input class="signUpbtn" type="submit" value="注册" onclick="signUP()">
+        </div>
+
+        <div class="login" id="signUp" hidden="hidden">
+            <p class="title">番茄影视</p>
+            <br>
+            <input class="account" type="text" name="账号" placeholder="账号">
+            <br>
+            <input class="passward" type="text" name="密码" placeholder="密码">
+            <br>
+            <input class="surePassword" type="text" name="确认密码" placeholder="再次输入密码">
+            <br>
+            <input class="submit" type="submit" value="注册" onclick="signUpSucceed()">
+        </div>
+    </div>
+
+    <div class="b-cover">
+        <div class="todayFilm">
+            <p class="today">今日票房</p>
+        </div>
+        <div class="Allfilm"> 
+            <div class="hotFilm">
+                <p class="wellReceived"><b>正在热映></b><a class="allLink">全部></a></p>
+            </div>
+
+            <div class="willReceivedFilm">
+                <p class="willReceived">
+                    <b>即将上映></b>
+                    <a class="willReceiveAllLink">全部></a>
+                </p>
+            </div>
+        </div>
+
+        
+    </div>
+    <div class="footer"></div>
+</body>
+
+<script type="text/javascript">
+        function login() {
+            document.getElementById("login").hidden="";
+        }
+
+        function loginSucceed() {
+            document.getElementById("login").hidden="hidden";
+        }
+
+        function findPassword() {
+            document.getElementById("login").hidden="hidden";
+        }
+
+        function signUP() {
+            document.getElementById("login").hidden="hidden";
+            document.getElementById("signUp").hidden="";
+        }
+
+        function signUpSucceed() {
+            document.getElementById("signUp").hidden="hidden";
+            document.getElementById("login").hidden="";
+        }
+
+        for(var i = 0;i < 8;i++) {
+
+        }
+</script>
+<html/>

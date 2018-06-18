@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>普通用户首页</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <ul>
+        <li id="tone" style="margin-left: 10%;"><a href="./homepage/home.html" target="show">首页</a></li>
+        <li id="tzore"><a href="./plays/showplay.html" target="show">电影</a></li>
+        <!-- <li id="tzore"><a href="./user-center/user-center.html" target="show">个人中心</a></li> -->
+        
+        <div class="s-cover">
+            <input type="text" class="s-search" placeholder="请输入搜索的电影">
+            <div id="s-btn"><div class="s-img"></div></div>
+        </div>
+        <li style="float: right;display: block; margin-right: 5%">
+            <a href="javascript:;" class="s-logout" >注销</a>
+            <a href="javascript:;" id="showlog">登录</a>
+            </li>
+    </ul>
+    <div id="login">
+        <div class="log-div">
+            <div class="log-head">LOGIN</div>
+            <div class="log-main">
+                <input type="text" id="log-name" placeholder="请输入用户名">
+                <input type="password" id="log-pass" placeholder="请输入密码">
+                <div class="log-last">
+                    <div id="sign"><a href="javascript:;">Don't have a count?</a></div>
+                    <div id="log-up">登录</div>
+                </div>
+                <div class="log-foot">番茄影院@xiyoutomato</div>
+            </div>
+            <div id="log-close"></div>
+        </div>
+        <div class="sign-div">
+            <div class="log-head">REGESTER</div>
+            <div class="log-main">
+                <input type="text" id="reg-name" placeholder="请输入用户名">
+                <input type="password" id="reg-pass" placeholder="请输入密码">
+                <div class="log-last">
+                    <div id="reg-up">注册</div>
+                </div>
+                <div class="log-foot">番茄影院@xiyoutomato</div>
+            </div>
+            <div id="reg-close"></div>
+        </div>
+    </div>
+    <iframe src="./homepage/home.html" style="width: 100%;height: 100vh;" name="show"></iframe>
+</body>
+<script type="text/javascript">
+window.onload = function() {
+    var oshow = document.getElementById('showlog');
+    var ozhu = document.getElementsByClassName('s-logout')[0];
+    var oclose = document.getElementById('log-close');
+    var sclose = document.getElementById('reg-close');
+
+    var ologin = document.getElementById("login");
+    var osign = document.getElementById('sign');
+
+    var lmain = document.getElementsByClassName('log-div')[0];
+    var smain = document.getElementsByClassName('sign-div')[0];
+
+    var regup = document.getElementById('reg-up');
+    var logup = document.getElementById('log-up');
+
+    var rname = document.getElementById('reg-name');
+    var rpass = document.getElementById('reg-pass');
+    
+    var lname = document.getElementById('log-name');
+    var lpass = document.getElementById('log-pass');
+
+    if(sessionStorage.getItem('identity')) {
+        oshow.style.display = 'none';
+        ozhu.style.display = 'block';
+    }
+    regup.onclick = function() {
+        //注册
+        if(rname.value && rpass.value) {
+            toReg(rname.value,rpass.value,smain,lmain);
+        }else {
+            alert('信息不完整');
+        }
+        reset(lname,lpass,rname,rpass);
+    }
+
+    logup.onclick = function() {
+        //注册
+        // alert(lname.value+lpass.value);
+        if(lname.value&& lpass.value) {
+            toLog(lname.value,lpass.value,ologin,ozhu,oshow);
+        }else {
+            alert('信息不完整');
+        }
+        reset(lname,lpass,rname,rpass);
+    }
+
+    osign.onclick = function() {
+        smain.style.display = 'block';
+        lmain.style.display = 'none';
+    }
+    sclose.onclick = function() {
+        ologin.style.display = 'none';
+        smain.style.display = 'none';
+        lmain.style.display = 'block';
+    }
+    oclose.addEventListener('click',close, false); 
+    oshow.addEventListener('click',show, false); 
+
+    ozhu.onclick = function() {
+        sessionStorage.clear();
+        ozhu.style.display = 'none';
+        oshow.style.display = 'block';
+        show();
+    }
+
+    function close() {
+        ologin.style.display = 'none';
+    }
+
+    function show() {
+        ologin.style.display = 'block';
+    }
+}
+function reset(una,upas,rna,rpas) {
+    una.value = '';
+    upas.value = '';
+    rna.value = '';
+    rpas.value = '';
+}
+function toLog(usename, pass, odiv, ozhu, olog) {
+    $.ajax({
+        type: "post",
+        dataType: "json",
+        url: "http://localhost:8080/users/log",
+        data: {
+            'username':usename,
+            'password':pass,
+            'identity':2
+        },
+        success: function (res) {
+        // console.log(res);
+            if (!res.error) {
+                sessionStorage.setItem('indenty',JSON.stringify(res.indenty));
+                ozhu.style.display = 'block';
+                olog.style.display = 'none';
+                odiv.style.display = 'none';
+                alert('登陆成功！');
+
+            }else {
+                alert(res.result);
+            }
+        },
+        error: function () {
+            alert("通信出错！");
+            }
+        });
+    }
+
+function toReg(usename, pass,oreg, olog) {
+    $.ajax({
+        type: "post",
+        // dataType: "json",
+        url: "http://localhost:8080/users/reg",
+        data: {
+            'username':usename,
+            'password':pass,
+             'identity':2
+        },
+        success: function (res) {
+            if (!res.error) {
+                // ozhu.style.display = 'block';
+                oreg.style.display = 'none';
+                olog.style.display = 'block';
+                alert("注册成功,请重新登录");
+
+            }else{
+                alert(res.result);
+            }
+        },
+        error: function (res) {
+            alert("注册失败："+ JSON.stringify(res));
+            }
+        });
+    }
+</script>
+</html>

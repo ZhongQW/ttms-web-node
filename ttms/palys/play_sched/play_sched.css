@@ -1,0 +1,108 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+.ps-cover {
+	width: 100%;
+	height: 300px;
+	background-image: linear-gradient(-20deg, #616161 0%, #353b55 100%);
+	/*background-image: linear-gradient(to top, #3b41c5 0%, #a981bb 49%, #ffc8a9 100%);*/
+}
+
+.ps-cover .ps-info {
+	width: 1000px;
+	height: 320px;
+	padding-top: 40px;
+	margin-left: 9%;
+}
+
+.ps-info .ps-img {
+	width: 250px;
+	height: 100%;
+	float: left;
+	border: 5px solid white;
+	background-color: pink;
+}
+
+.ps-info .ps-detail {
+	width: 700px;
+	margin-left: 40px;
+	height: 100%;
+	float: left;
+	color: white;
+}
+
+.ps-detail .ps-name {
+	width: 100%;
+	height: auto;
+	font-size: 30px;
+	letter-spacing: 5px;
+	line-height: 50px;
+	font-weight: bold;
+}
+
+.ps-detail .ps-one {
+	width: 100%;
+	font-size: 16px;
+	line-height: 35px;
+}
+
+.s-seat {
+	width: 82%;
+	height: auto;
+	margin:9% auto;
+	margin-top: 120px;
+}
+
+.s-seat .s-head {
+	color: black;
+	font-size: 23px;
+	letter-spacing: 3px;
+} 
+
+.s-li {
+	width: 100%;
+	height: 120px;
+	margin-top: 20px;
+	border-bottom: 1px solid black;
+	font-size: 20px;
+}
+
+.s-li  .s-cover {
+	/*display: inline-block;*/
+	width: 40%;
+	height: 100%;
+	float: left;
+}
+
+.s-cover .s-studio {
+	width: 100%;
+	height: 60%;
+	line-height: 60px;
+}
+
+.s-cover .s-time {
+	width: 100%;
+	font-size: 18px;
+}
+
+.s-li .s-cost {
+	width: 30%;
+	height: 100%;
+	float: left;
+	text-align: center;
+	line-height: 100px;
+}
+
+.s-li .s-buy {
+	width: 150px;
+	height: 50px;
+	margin-left: 10%;
+	margin-top: 25px;
+	color: white;
+	text-align: center;
+	font-size: 18px;
+	line-height: 50px;
+	background-color: black;
+	float: left;
+}

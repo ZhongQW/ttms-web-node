@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>演出计划详情</title>
+	<link rel="stylesheet" href="sched_details.css">
+	<script src="sched_details.js"></script>
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body style="overflow: hidden">
+<div id = "back">
+	<img src="../img/movie1.jpg" />
+</div>
+<div id = "details" >
+	<div class="play_name">
+		<span id = "playName">小公主艾薇拉与神秘王国</span>
+	</div>
+	<hr style="width: 1122px;"/>
+	<div class="detailsP">
+		<div class="play_img">
+			<img src="../img/movie1.jpg" id = "imgP"/>
+		</div>
+		<div class="play_details">
+			<div class = "play">
+				<div>
+					<span>类型:</span>
+					<span id = "type">哈哈哈</span>
+				</div>
+				<div>
+					<span>语言:</span>
+					<span id = "lang">哈哈哈</span>
+				</div>
+				<div>
+					<span>时长:</span>
+					<span id = "length">哈哈哈</span>
+				</div>
+				<div>
+					<span>票价:</span>
+					<span id = "money">哈哈哈</span>
+				</div>
+				<div>
+					<span>介绍:</span>
+					<span id = "intro"></span>
+				</div>
+			</div>
+			<div class="schedulP">
+				<div>
+					<span>当前放映时间:</span>
+					<span id = "timeP">哈哈哈</span>
+					<br/>
+					<span>
+                        修改:
+                        <input type="datetime-local" id = "dateup" style="background-color: white;width: 200px;" />
+                    </span>
+				</div>
+				<div>
+					<span>当前剧目:</span>
+					<span id = "status"></span>
+					<br/>
+					<span>
+                        修改:
+                        <select id = "statusup">
+                        </select>
+                    </span>
+				</div>
+				<div>
+					<span>当前演出厅:</span>
+					<span id = "studio">哈哈哈哈哈哈哈哈哈</span>
+					<br/>
+					<span>
+                        修改:
+                        <select id = "studioup">
+                        </select>
+                    </span>
+                    <br/>
+                    <span>当前票价:</span>
+					<span id = "ticket-p"></span>
+					<br/>
+					<span>
+                        修改: <input type="text" id="after-p" style="background-color: white;width: 200px;">
+                    </span>
+				</div>
+				<button class="button" id = "update_schedul" style="vertical-align:middle"><span>确认修改 </span></button>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

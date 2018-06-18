@@ -1,0 +1,102 @@
+.p-show {
+	padding-bottom: 200px;
+	width: 80%;
+	margin:0 auto;
+	height: auto;
+	display: flex;
+	/*flex-direction: column;*/
+	flex-direction: row;
+	flex-wrap:wrap;
+}
+
+.p-show .tclass {
+	width: 100%;
+	height: 70px;
+	line-height: 90px;
+	text-indent: 5px;
+	font-size: 30px;
+	color: hotpink;
+}
+
+.p-show .hclass {
+	width: 100%;
+	height: 70px;
+	line-height: 90px;
+	text-indent: 5px;
+	font-size: 30px;
+	color: lightblue;
+}
+
+.p-show .p-col {
+	width: 32%;
+	height: 200px;
+	margin-left: 1%;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+.p-col .p-img {
+	width: 53%;
+	height: 100%;
+	float: left;
+	margin-right: 2%;
+	background-color: pink;
+	position: relative;
+}
+
+.p-col .p-info {
+	width: 45%;
+	height: 100%;
+	float: left;
+	line-height: 30px;
+	font-size: 14px;
+	position: relative;
+}
+
+.p-info .p-name {
+	width: 100%;
+	height: auto;
+	line-height: 30px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.p-info .p-into {
+	width: 80%;
+	height: auto;
+	max-height: 100px;
+	overflow: hidden;
+	background: url('../../img/queto.png') no-repeat;
+	background-position: left top;
+	background-size: 13% auto;
+	text-overflow: ellipsis;
+	font-size: 14px;
+	line-height: 25px;
+	padding-left: 20px;
+}
+
+.p-info .p-btn {
+	width: 70%;
+	height: 30px;
+	position: absolute;
+	bottom: 0;
+	left: 10px;
+	color: white;
+	border-radius: 90px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 14px;
+	background-color: black;
+}
+
+.p-img .p-pre {
+	width: 50px;
+	height: 25px;
+	position: absolute;
+	bottom:0;
+	right: 0;
+	background-color: black;
+	color: white;
+	font-size: 14px;
+	line-height: 25px;
+	text-align: center;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理员</title>
+    <link  rel="stylesheet" href="main-manager.css">
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div id = "ul">
+    <ul style="margin-bottom: 0;">
+        <li><img src="../img/logo2.png" style="width:130px;padding-right: 30px">
+        </li>
+        <li><a  href="../palys/play.html" target="shoupiao" >剧目管理</a></li>
+        <li><a  href="../schedule/schedule.html" target="shoupiao">演出计划</a></li>
+        <li><a  href="../stdio/stdio.html" target="shoupiao">演出厅管理</a></li>
+        <li><a  href="../user/user.html" target="shoupiao">用户管理</a></li>
+        <li id="count">
+            <div class="show"> 统 计 &nbsp<span style="font-size: 14px">▼</span></div>
+            <div id="s-li">
+                <div class="l-li" style="border-bottom: 1px solid white">
+                    <a href="../saler_statistics/saler_statistics.html" target="shoupiao">销售统计 ></a>
+                </div>
+                <div class="l-li">
+                    <a href="../saler_statistics/count.html" target="shoupiao">票房统计 ></a>
+                </div>
+            </div>
+        </li>
+        <li class="zhuxiao"><a href="../login-register/join-in.html" style="font-size: 16px;">注销</a></li>
+    </ul>
+</div>
+<div id = "div" style="width: 100%;padding: 0;">
+    <iframe id="shoupiao"  name="shoupiao" src="../palys/play.html" style="width: 100%;padding: 0;margin:0 auto;margin-top:-10px;"></iframe>
+</div>
+</body>
+<script>
+window.onload = function() {
+    var oShow = document.getElementsByClassName('show')[0];
+    var osLi = document.getElementById('s-li');
+    var flag = 0;
+    oShow.addEventListener('click', function(e) {
+        if(flag === 0) {
+            osLi.style.height = '100px';
+            flag = 1;
+        } else {
+            osLi.style.height = '0';
+            flag = 0;
+        }
+    },false);
+    // document.body.addEventListener('click', function(e) {
+    //     console.log(e.target.className);
+    // }, false)
+    osLi.addEventListener('click', function() {
+        osLi.style.height = '0';
+        flag = 0;
+    }, false)
+}
+</script>
+</html>

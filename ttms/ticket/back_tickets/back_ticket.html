@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>退票</title>
+	<link rel="stylesheet" type="text/css" href="./back_ticket.css">
+	<script src="./back_ticket.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="back">
+		<!-- <input type="text"> -->
+		<div class="search">
+			<input type="text" id="oSea" placeholder="请输入票id">
+			<div class="find">搜索</div>
+		</div>
+
+		<div class="show">
+			<div class="s-head">番茄影院电子票<span id="ticket_id"></span></div>
+			<p class="one">影片：<span id="movname"></span></p>
+			<p class="one">影厅：<span id="stuname"></span></p>
+			<table class="date">
+				<tr style="font-size: 20px;">
+					<th>座位</th>
+					<th>日期 时间</th>
+				</tr style="font-size: 18px;">
+				<td id="seat"></td>
+				<td id="time"></td>
+			</table>
+			<p class="two">票价：<span id="price"></span></p>
+			<p class="two">订单时间：<span id="lock"></span></p>
+
+			
+
+		</div>
+
+		<div class="toback">确认退票</div>
+	</div>
+</body>
+</html>

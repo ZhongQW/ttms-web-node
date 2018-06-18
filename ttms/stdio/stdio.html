@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>演出厅</title>
+    <link rel="stylesheet" href="stdio.css">
+    <script src="stdio.js"></script>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<table  id="customers">
+    <tr>
+        <th>演出厅id</th>
+        <th>演出厅名称</th>
+        <th>可用座位</th>
+        <th>操作</th>
+        <th>操作</th>
+    </tr>
+</table>
+<input type="button"  id ="btnAdd" value="增加演出厅" data-toggle="modal" data-target="#myModal" />
+
+<!-- 模态框 -->
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- 模态框头部 -->
+            <div class="modal-header">
+                <h4 class="modal-title" >增加演出厅</h4>
+            </div>
+
+            <!-- 模态框主体 -->
+            <div class="modal-body" >
+                演出厅名称：<input  id ="name"/ style="margin-bottom: 10px;width: 50%">
+                <br/>
+                演出厅的行：<input  id ="row" style="margin-bottom: 10px;width: 50%"/>
+                <br/>
+                演出厅的列：<input  id = "col" style="margin-bottom: 10px;width: 50%"/>
+                <br/>
+                <span>演出厅介绍：</span>
+                <br/>
+                <textarea id = "intro" placeholder="请输入演出厅的介绍" style="margin-top: 10px;width:90%;"></textarea>
+            </div>
+            <!-- 模态框底部 -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal"  id = "btn">确认</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

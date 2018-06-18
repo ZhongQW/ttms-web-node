@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="count.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+
+</head>
+<body>
+<table id="play_table">
+	<tr>
+		<th>电影排行</th>
+		<th>电影名</th>
+		<th>电影票房</th>
+	</tr>
+</table>
+</body>
+<script type="text/javascript">
+window.onload = function() {
+	var table = document.getElementById('play_table');
+    $.ajax({
+        type:'get',
+        url:'http://localhost:8080/plays/count',
+        success : function(res) {
+            console.log(res);
+            var i, plen = res.result.length;
+            if(!res.error) {
+                for( i = 0; i < plen; i ++) {
+                    var otr = document.createElement("tr");
+                    var oid = document.createElement('td');
+                    var oname = document.createElement('td');
+                    var ocount = document.createElement('td');
+                    oid.innerHTML = i;
+                    oname.innerHTML = res.result[i].play_name;
+                    ocount.innerHTML = res.result[i].count;
+                    otr.appendChild(oid);
+                    otr.appendChild(oname);
+                    otr.appendChild(ocount);
+                    table.appendChild(otr);
+                }
+            }else {
+                alert(res.result);
+            }
+        },
+        error : function(res) {
+            alert(res.result);
+        }
+    })
+}
+</script>
+</html>

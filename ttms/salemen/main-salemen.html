@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>售票员界面</title>
+    <link  rel="stylesheet" href="./main-salemen.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="salemen.js"></script>
+</head>
+<body>
+<div class="s-head">
+	<div class="s-logo"></div>
+	<div class="s-cover">
+		<input type="text" class="s-search" placeholder="请输入搜索的电影">
+		<div id="s-btn"><div class="s-img"></div></div>
+	</div>
+</div>
+<ul>
+    <li id="tone"><a href="../nomarl_user/homepage/home.html" target="show">首页</a></li>
+    <li id="tone"><a href="../palys/play_show/showplay.html" target="show">正在热映</a></li>
+    <li id="tzore"><a href="../palys/play_show/showplay.html" target="show">即将上线</a></li>
+    <li ><a href="../ticket/back_tickets/back_ticket.html" target="show">退票处理</a></li>
+    <li style="float: right;display: block; margin-right: 200px"><a href="../login-register/join-in.html" class="s-logout">注销</a></li>
+</ul>
+
+<div class="s-iframe">
+    <iframe id="show" name="show" style="width: 100%;height: 800px;margin:0 auto;border: none" src="../nomarl_user/homepage/home.html"></iframe>
+</div>
+</body>
+<script>
+window.onload = function() {
+    document.getElementById('tone').onclick = function(e) {
+        sessionStorage.setItem("p_type",1);
+    }
+
+    document.getElementById('tzore').onclick = function() {
+        sessionStorage.setItem("p_type",0);
+    }
+}
+</script>
+</html>

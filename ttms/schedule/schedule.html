@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>演出计划</title>
+    <link rel="stylesheet" href="schedule.css">
+    <!-- <meta http-equiv="refresh" content="10"> -->
+    <script src="schedlue.js"></script>
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<!-- <p id = "title">演出计划</p> -->
+<div id="whole">
+</div>
+<!-- 模态框 -->
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- 模态框头部 -->
+            <div class="modal-header">
+                <h4 class="modal-title" >添加演出计划</h3>
+            </div>
+
+            <!-- 模态框主体 -->
+            <div class="modal-body" >
+                <div id = "play_wei">
+
+                </div>
+                <div id = "selected">
+                    <p style="text-align: center;font-size: 18px;line-height: 50px;margin: 0;">已选剧目</p>
+                    <span>剧目：</span>
+                    <span id = "play_selected_name"></span>
+                    <br>
+                    <span>演出厅：</span>
+                    <span id = "studio_selected_name"></span>
+                    <br>
+                    <div>
+                    <span>定制票价：</span>
+                    <input type="text" id="price" style="outline: none;border: none;border-bottom: 1px solid black;height: 20px;margin-bottom: 10px;">
+                    <br/>
+                    <span>开始时间：</span>
+                    <input type="datetime-local" id = "start_time"/>
+                    </div>
+
+                    
+                </div>
+           </div>
+            <!-- 模态框底部 -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal"  id = "btnAdd">确认</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

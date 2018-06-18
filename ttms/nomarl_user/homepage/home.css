@@ -1,0 +1,334 @@
+body {
+    padding:0;
+    margin: 0;
+    min-width: 1100px;
+
+}
+.cover .login{
+    background-color: white;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    width: 350px;
+    height: 350px;
+}
+
+.title{
+    position: absolute;
+    color: hotpink;
+    font-size: 25px;
+    top: 3%;
+    left: 10%;
+    width: 100px;
+    height: 10%;
+    margin: 0;
+    padding: 0;
+}
+
+.account{
+    position: absolute;
+    top: 13%;
+    left: 10%;
+    width: 80%;
+    height: 12%;
+    font-size: 18px;
+}
+
+.passward{
+    position: absolute;
+    top: 31%;
+    left: 10%;
+    width: 80%;
+    height: 12%;
+    font-size: 18px;
+}
+
+.loginbtn{
+    background-color: #3a84e8;
+    color: white;
+    font-size: 18px;
+    position: absolute;
+    top: 66%;
+    left: 10%;
+    width: 80%;
+    height: 13%;
+}
+
+.autoLogintext{
+    position: absolute;
+    top: 49%;
+    left: 16%;
+    width: 20%;
+    height: 5%;
+}
+
+.autoLogin{
+    position: absolute;
+    top: 53%;
+    left: 10%;
+    width: 5%;
+    height: 5%;
+}
+
+.findPassword{
+    background-color: white;
+    border: white;
+    color: blue;
+    position: absolute;
+    top: 83%;
+    left: 10%;
+    width: 20%;
+    height: 5%;
+}
+
+.signUpbtn{
+    background-color: white;
+    border: white;
+    color: blue;
+    position: absolute;
+    top: 83%;
+    left: 70%;
+    width: 20%;
+    height: 5%;
+}
+
+.surePassword{
+    position: absolute;
+    top: 49%;
+    left: 10%;
+    width: 80%;
+    height: 12%;
+    font-size: 18px;
+}
+
+.submit{
+    background-color: #3a84e8;
+    color: white;
+    font-size: 18px;
+    /*position: absolute;*/
+    top: 70%;
+    left: 10%;
+    width: 80%;
+    height: 13%;
+}
+
+.image{
+    display: block;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.b-cover {
+    height: auto;
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow:hidden;
+}
+.b-cover .Allfilm {
+    width:60%;
+    float: right;
+    height: auto;
+    margin-right:5%;
+}
+
+.Allfilm .hotFilm{
+    width: 100%;
+    height: auto;
+    overflow:hidden;
+    margin: 0 auto;
+}
+
+/*热映*/
+.hotFilm .wellReceived{
+    color: deeppink;
+    font-size: 26px;
+    height: 50px;
+    padding:0;
+    margin-bottom: 8px;
+    text-indent: 10px;
+    line-height: 50px;
+}
+
+/*全部*/
+.hotFilm .allLink{
+    float: right;
+    margin-right: 5%;
+    line-height: 50px;
+    color: deeppink;
+    font-size: 18px;
+    text-decoration-color: white;
+}
+
+.allLink:hover{
+    background-color: white;
+    text-decoration-color: deeppink;
+}
+
+.Allfilm .film{
+    float:left;
+    width:22%;
+    height:310px;
+    margin:1%;
+}
+
+.film .filmImage{
+    width: 100%;
+    height: 85%;
+}
+
+.film .buyBtn{
+    height: 40px;
+    background-color: white;
+    border-width: 0px;
+    margin:0;
+    width: 100%;
+    outline: none;
+    font-size: 20px;
+    color: deeppink;
+    letter-spacing: 5px;
+    font-size: 16px;
+    /*font-weight: bold;*/
+}
+.film .buyBtn:hover{
+    color: white;
+    background-color: deeppink;
+}
+
+/*即将热映div*/
+.Allfilm .willReceivedFilm{
+    margin:0 auto;
+    height:auto; 
+    overflow:hidden;
+    width: 100%;
+    background-color: white;
+}
+
+/*即将热映文字*/
+.willReceivedFilm .willReceived{
+    color: dodgerblue;
+    font-size: 26px;
+    height: 50px;
+    padding:0;
+    margin-bottom: 8px;
+    text-indent: 10px;
+    line-height: 50px;
+}
+
+/*即将热映旁边的全部*/
+.willReceiveAllLink{
+    color: dodgerblue;
+    float: right;
+    margin-right: 5%;
+    line-height: 50px;
+    font-size: 18px;
+    text-decoration-color: white;
+}
+
+.willReceiveAllLink:hover{
+    background-color: white;
+    text-decoration-color: dodgerblue;
+}
+
+.willBuyBtn{
+    background-color: white;
+    border-width: 0;
+    height: 40px;
+    width: 100%;
+    outline: none;
+    font-size: 18px;
+    color: dodgerblue;
+    letter-spacing: 5px;
+    /*font-weight: bold;*/
+}
+.willBuyBtn:hover {
+    color: white;
+    background-color: dodgerblue;
+}
+.b-cover  .todayFilm{
+    float: right;
+    width: 30%;
+    height: auto;
+}
+
+.todayFilm .today{
+    width: 100%;
+    color: deeppink;
+    font-size: 26px;
+    letter-spacing: 5px;
+    letter-spacing: 5px;
+}
+
+.todayFilm .firstFilm{
+    /*position: relative;*/
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+    background-color: #d0f0f6;
+    padding: 0;
+    margin: 0;
+}
+
+.firstFilm .firstFilmImage{
+    height: 100%;
+    width: 35%;
+    float: left;
+}
+
+.firstFilm .firstFilmName{
+    font-size: 25px;
+    text-indent: 10px;
+    color: black;
+    float: left;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+.firstFilm .firstFilmNumber{
+    float: right;
+    font-size: 15px;
+    color: deeppink;
+    font-weight: bold;
+}
+
+.todayFilm .allTodayFilmDiv{
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.allTodayFilmDiv .filmMessage{
+    width: 100%;
+    height: 50px;
+}
+
+.filmMessage .filmName{
+    /*position: absolute;*/
+    width: 70%;
+    font-size: 23px;
+    /*padding: 10px;*/
+    margin: 0;
+    float: left;
+}
+
+.filmMessage .filmNumber{
+    /*position: absolute;*/
+    /*right: 0px;*/
+    float: left;
+    width: 30%;
+    font-size: 20px;
+    font-weight: bold;
+    /*padding: 12px;*/
+    margin: 0;
+    color: deeppink;
+    text-align: right;
+}
+
+.footer {
+    width: 100%;
+    height: 350px;
+    color: white;
+    margin-top: 100px;
+    background-color: #353b55;
+}

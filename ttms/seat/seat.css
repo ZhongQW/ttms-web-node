@@ -1,0 +1,155 @@
+* {
+     margin: 0;
+}
+
+.s-body {
+	width: 100%;
+	height: 700px;
+}
+
+
+.s-body .s-seat {
+	width: 60%;
+	height: 100%;
+	float: left;
+}
+
+.s-seat .s-commit {
+	width:70%;
+	height: 50px;
+	margin:5% auto;
+	background-color: rgba(0,0,0,0.1);
+	border-radius: 10px;
+	text-align: center;
+	line-height:50px;
+	letter-spacing: 5px;
+	color: gray;
+}
+
+.s-seat .s-studio{
+	width: 100%;
+	height: 60%;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+}
+.s-studio .s-row {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	/*background-color: pink;*/
+	text-align: center;
+}
+
+.s-row .s-index{
+	width: 10%;
+	height: 100%;
+	float: left;
+}
+
+.s-row .s-main {
+	width: 80%;
+	height: 100%;
+	float: left;
+	background-color: white;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	line-height: 30px;
+	color: white;
+	align-items: center;
+}
+
+.s-main .s-col {
+	width: 30px;
+	height: 30px;
+	background:url('../img/s-seat.png');
+	background-size: 100% 100%;
+}
+
+.s-main .s-bad {
+	width: 30px;
+	height: 30px;
+	background:url('../img/n-seat.png');
+	background-size: 100% 100%;
+}
+
+.s-main .s-emp {
+	width: 30px;
+	height: 30px;
+	background:url('../img/b-seat.png');
+	background-size: 100% 100%;
+}
+
+.s-main .s-sel {
+	width: 30px;
+	height: 30px;
+	background:url('../img/n-seat.png');
+	background-size: 100% 100%;
+}
+.s-main .s-bad:hover,.s-main .s-emp:hover ,.s-main .s-col:hover {
+	background:url('../img/n-seat.png');
+	background-size: 100% 100%;
+}
+
+.s-body .s-show {
+	width: 40%;
+	height: 100%;
+	float: left;
+	color:gray;
+	line-height: 40px;
+	display: flex;
+	flex-direction: column;
+	letter-spacing: 5px;
+}
+
+.s-show #studio {
+	width: 80%;
+	height: 70px;
+	text-align: center;
+	color: black;
+	font-size: 20px;
+	line-height: 80px;
+}
+
+.s-show .s-seled {
+	width: 80%;
+	height: auto;
+}
+
+.s-show .s-detail {
+	width: 80%;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap; 
+}
+
+.s-detail .s-one{
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border: 1px solid black;
+	margin:10px;
+}
+
+.s-show .s-pice {
+	width: 80%;
+	height: 50px;
+	display: flex;
+	flex-direction: row;
+}
+
+.s-pice .s-act {
+	width: 30%;
+	height: 45px;
+	font-size: 16px;
+	letter-spacing: 2px;
+	text-align: center;
+	float: left;
+	margin:10px;
+	color:white;
+	background-color: black;
+}
+

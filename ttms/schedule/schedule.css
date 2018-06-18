@@ -1,0 +1,132 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.div1{
+    height:350px;
+    width: 100%;
+    /*overflow:hidden;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.div1 .cover {
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    margin-right: 100px;
+}
+
+.cover .studio_name{
+    font-size: 25px;
+    margin:0 auto;
+    width: 20px;
+}
+
+.div1 .s-cover {
+    width: 1000px;
+    height: 330px;
+    overflow-x: auto;
+
+    margin-top: 10px;
+}
+.s-cover .schedule{
+    float: left;
+    /*padding: 15px;*/
+    border: 1px solid lightgray;
+    width: 220px;
+    height: 310px;
+    margin-top: 10px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.s-cover .schedule:hover {
+    box-shadow: 10px 10px 5px rgb(222,222,222);
+}
+.s-cover .toadd {
+    float: left;
+    background:url('../img/add.png') no-repeat;
+    background-position: center;
+    background-size: 60% auto;
+    border: 1px solid lightgray;
+    width: 220px;
+    height: 310px;
+    margin-top: 10px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.schedule img{
+    width: 180px;
+    height: 200px;
+    display:block;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+.schedule .name{
+    width: 100%;
+    height: 45px;
+    line-height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.schedule .time{
+    width: 100%;
+    margin-top:-10px;
+    height: 50px;
+    line-height: 25px;
+    font-size: 16px;
+}
+
+/*模态框*/
+#play_wei{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    overflow:scroll;
+}
+
+#end_time{
+    position: absolute;
+    left: 320px;
+    top: 275px;
+}
+#yy{
+    position: absolute;
+    top: 275px;
+    left: 300px;
+}
+.add_play{
+    float: left;
+    width:100px;
+    height: 60px;
+    margin-right: 20px;
+}
+.add_play button{
+    background-color: white;
+    outline: none;
+    border: 1px solid black;
+    width: 100px;
+    height: 40px;
+}
+.play_select{
+    background-color: #5FB878;
+}
+.play_time{
+    display: block;
+}
+
+#selected{
+    width:100%;
+    height: 180px;
+    line-height: 30px;
+}

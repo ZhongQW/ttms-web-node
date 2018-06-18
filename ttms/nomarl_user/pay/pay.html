@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>支付</title>
+    <link rel="stylesheet" href="pay.css" />
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="pay.js"></script>
+    <script>
+        // var timeCounter = (function() {
+        //     var int;
+        //     var total = 54000;
+        //     return function(elemID) {
+        //         obj = document.getElementById(elemID);
+        //         var s = (total%60) < 10 ? ('0' + total%60) : total%60;
+        //         var h = total/3600 < 10 ? ('0' + parseInt(total/3600)) : parseInt(total/3600);
+        //         var m = (total-h*3600)/60 < 10 ? ('0' + parseInt((total-h*3600)/60)) : parseInt((total-h*3600)/60);
+        //         obj.innerHTML = h + ' : ' + m + ' : ' + s;
+        //         total--;
+        //         int = setTimeout("timeCounter('" + elemID + "')", 1000);
+        //         if(total < 0) clearTimeout(int);
+        //     }
+        // })()
+    </script>
+</head>
+<body onLoad="timeCounter('timeCounter')">
+<div class="nav">
+    <p>确认订单信息</p>
+    <span>请在15分钟内完成付款，超时系统将自动释放已选座位</span>
+    <div>
+        <span>剩余支付时间：</span>
+        <span id="timeCounter">00 : 15 : 00</span>
+    </div>
+</div>
+<div id = "details">
+<div id = "play_details">
+    <img src="../../ttms-mana/img/movie1.jpg" id = "img"/>
+    <ul>
+        <li>
+            <span>剧名：</span>
+            <span id = "name">哈哈</span>
+        </li>
+        <li>
+            <span>类型：</span>
+            <span id = "type">哈哈</span>
+        </li>
+        <li>
+            <span>影厅：</span>
+            <span id = "studio">哈哈</span>
+        </li>
+        <li>
+            <span>场次：</span>
+            <span id = "timeP">哈哈</span>
+        </li>
+        <li>
+            <span>座位：</span>
+            <div id = "seat">哈哈</div>
+        </li>
+    </ul>
+</div>
+<div id = "tel">
+    <p>接受取票码的手机号:</p>
+    <span id = "phone">13636702813</span>
+    <a href="../user-center/user-center.html">修改</a>
+</div>
+<div id = "moneyP">
+    <p>金额小计：</p>
+    <p id = "subtotal">¥28.50</p>
+</div>
+<button id = "confirm">确认支付</button>
+</div>
+</body>
+
+<script type="text/javascript">
+window.onload = function(){
+    var sched_id = sessionStorage.getItem('sched_id');
+    var data = JSON.parse(sessionStorage.getItem('data'));
+    // console.log('data:',data);
+    // console.log(sched_id);
+    $.ajax({
+       type : "get",
+       url : "http://localhost:8080/schedule/getone",
+       data :{
+           'sched_id' : sched_id,    //所选剧目的ID,
+           'seat_id' : 
+       },
+        success : function(res){
+            console.log(res);
+           if(!res.error){
+                $('#img').innerHTML = res.result.imgage;//剧目图片
+                $('#name').innerHTML = res.result.play_name;//剧目名
+                $('#type').innerHTML = res.result.play_type_id;//剧目类型
+                $('#studio').innerHTML = res.result.studio_name;//演出厅名
+                $('#timeP').innerHTML = res.result.sale_time;//演出时间
+                $('#seat').innerHTML = res.result.seat;//所选座位
+                $('#phone').innerHTML = res.result.user_tel;//用户手机号
+                $('#subtotal').innerHTML = res.result.subtotal;//小记
+           }else{
+                alert(res.result);
+           }
+        },
+        error : function(res){
+            alert("加载失败！"+JSON.stringify(res));
+        }
+    });
+    // $('#confirm').onclick = function(){
+    //     $.ajax({
+    //         type : "get",
+    //         url : "http://localhost:8080/",
+    //         data :{
+    //             'play_id' :
+    //         },
+    //         success : function(res){
+    //             if(!res.error){
+    //                 alert("购票成功！");
+    //                 window.location = "../user-center/user-center.html";
+    //             }else{
+    //                 alert(res.result);
+    //             }
+    //         },
+    //         error : function(res){
+    //             alert("加载失败！"+JSON.stringify(res));
+    //         }
+    //     });
+    // }
+};
+</script>
+</html>
